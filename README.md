@@ -21,4 +21,4 @@ Easy: makes random valid moves quickly
 
 Medium: uses heuristics for classic. for ultimate, uses minimax with a depth of 3
 
-Hard: uses heuristics for classic. for ultimate, uses minimax with a depth of 5 (anything deeper is too slow)
+Hard: uses heuristics for classic. for ultimate, uses minimax with a depth of 5 (anything deeper is too slow). But this depth has proven to me that it's challenging enough to always make a draw if not beat me from several plays.
