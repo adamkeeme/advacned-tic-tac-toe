@@ -87,10 +87,10 @@ class UltimateBoard:
         target_board = self.small_boards[small_board_idx]
         
         target_board.mark_square(square_idx, player)
-        self._update_overall_winner(player)
+        self.update_overall_winner(player)
         return square_idx
 
-    def _update_overall_winner(self, player_who_moved: str): 
+    def update_overall_winner(self, player_who_moved: str): 
         # checks for an overall winner or a draw on the main grid
         if self.overall_winner: return
 
@@ -133,7 +133,7 @@ class UltimateBoard:
 
 
 # terminal input handling for classic and ultimate modes
-def _get_valid_console_input(prompt: str, valid_0_indices: List[int]) -> int:
+def get_valid_console_input(prompt: str, valid_0_indices: List[int]) -> int:
     valid_1_options_disp = sorted([i + 1 for i in valid_0_indices])
     while True:
         try:
@@ -152,7 +152,7 @@ def play_classic_console(ai_level: str):
         board.print_console()
         print(f"Player {current_player}'s turn.")
         if current_player == PLAYER_X:
-            move = _get_valid_console_input("Choose square", board.get_empty_square_indices())
+            move = get_valid_console_input("Choose square", board.get_empty_square_indices())
         else:
             move = ai_bots.choose_move_small(board, ai_level)
             print(f"AI ({ai_level}) plays {move + 1}")
@@ -176,13 +176,13 @@ def play_ultimate_console(ai_level: str):
             print(f"Forced to play in small board {forced_idx + 1}.")
             b_idx = forced_idx
         else:
-            b_idx = _get_valid_console_input("Choose board", available_boards)
+            b_idx = get_valid_console_input("Choose board", available_boards)
 
         print(f"Selected small board {b_idx + 1}:")
         ub.small_boards[b_idx].print_console()
 
         if current_player == PLAYER_X:
-            s_idx = _get_valid_console_input("Choose square", ub.small_boards[b_idx].get_empty_square_indices())
+            s_idx = get_valid_console_input("Choose square", ub.small_boards[b_idx].get_empty_square_indices())
         else:
             print(f"AI ({ai_level}) is thinking...")
             b_idx, s_idx = ai_bots.choose_move(ub, forced_idx, ai_level)
