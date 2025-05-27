@@ -13,3 +13,9 @@ The [rules]([url](https://store.steampowered.com/app/360870/Ultimate_TicTacToe/)
 - Your next move will be in a board that your opponent sends you to, given by the square that he just made his move on.
 - What happens if the opponent sends you to an already won or draw board? Then you can go wherever you like, but be sure not to send your opponent to a closed board, because he would have the same advantage.
 - After playing a little, you will see that, even though you could win a small board easily, the fact that if the move you make would put your opponent at an advantage, you could chose to not win that board at the time, or perhaps forfeit it, if it will give you an advantage to complete other 3 boards in a row and win the match.
+
+
+<h4>Difficulties</h4>
+Easy: makes random valid moves quickly
+Medium: uses heuristics for classic. for ultimate, uses minimax with a depth of 3
+Hard: uses heuristics for classic. for ultimate, uses minimax with a depth of 5 (anything deeper is too slow)
