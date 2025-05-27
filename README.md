@@ -1,4 +1,4 @@
-###Classic & Ultimate Tic Tac Toe with AIs (Easy/Medium/Hard)###
+<h3>Classic & Ultimate Tic Tac Toe with AIs (Easy/Medium/Hard)</h3>
 
 
 To start the game, simply run the "ultimate_ttt_gui.py" script. No python packages needed as far as you are on Python=3.9 
