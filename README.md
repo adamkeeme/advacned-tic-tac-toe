@@ -16,6 +16,9 @@ The [rules]([url](https://store.steampowered.com/app/360870/Ultimate_TicTacToe/)
 
 
 <h4>Difficulties</h4>
+
 Easy: makes random valid moves quickly
+
 Medium: uses heuristics for classic. for ultimate, uses minimax with a depth of 3
+
 Hard: uses heuristics for classic. for ultimate, uses minimax with a depth of 5 (anything deeper is too slow)
